@@ -1,0 +1,14 @@
+<div class="row header-row">
+  <div class="column header-column">Symbol</div>
+  <div class="column header-column">Company Name</div>
+  <div class="column header-column">Price</div>
+</div>
+{{range .}}
+<div class="row">
+  <div class="column">{{.Symbol}}</div>
+
+  <div class="column">{{.Name}}</div>
+  <div class="column">{{.Price}}</div>
+  </div>
+  {{end}}
+</div>

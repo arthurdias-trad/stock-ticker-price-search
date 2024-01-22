@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Prices</title>
+    <script src="https://unpkg.com/htmx.org@1.9.4/dist/htmx.min.js"></script>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="static/css/styles.css" />
+    <script src="static/js/index.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Stock Price Checker</h1>
+      <div
+        class="actions-container"
+        hx-get="/single-quote"
+        hx-trigger="load delay:100ms"
+        id="actions-container"
+      ></div>
+      <div class="prices-container">
+        <div id="quote-results" class="quotes-container">
+          <div class="infoHeader">
+            <h2>Your stock prices will be displayed here</h2>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div></div>
+  </body>
+</html>

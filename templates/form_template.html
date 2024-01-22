@@ -1,0 +1,40 @@
+<div class="actions">
+  <div
+    class="action-button {{if .IsMultiQuote}} {{else}}toggled{{end}}"
+    id="single-quote-button"
+    hx-get="/single-quote"
+    hx-trigger="click"
+    hx-target="#actions-container"
+  >
+    Single Quote
+  </div>
+  <div
+    class="action-button {{if .IsMultiQuote}}toggled{{else}} {{end}}"
+    id="multi-quote-button"
+    hx-get="/multi-quote"
+    hx-trigger="click"
+    hx-target="#actions-container"
+  >
+    Multi Quote
+  </div>
+</div>
+<div class="form-container" id="quote-form">
+  <p class="howToUse">
+    {{if .IsMultiQuote}}Enter comma-separated list of stock ticker symbols and
+    hit submit.{{else}}Enter a stock ticker symbol and hit submit.{{end}}
+  </p>
+  <form
+    hx-get="{{if .IsMultiQuote}}/quotes{{else}}/quote{{end}}"
+    hx-target="#quote-results"
+  >
+    <div class="input-container">
+      <input
+        type="text"
+        name="{{if .IsMultiQuote}}symbols{{else}}symbol{{end}}"
+        id="symbol"
+        placeholder="Enter stock symbol..."
+      />
+      <button type="submit" id="submit-button">Submit</button>
+    </div>
+  </form>
+</div>

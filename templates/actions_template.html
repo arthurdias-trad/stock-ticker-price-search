@@ -1,0 +1,18 @@
+<div
+  class="action-button {{if .IsMultiQuote}} {{else}}toggled{{end}}"
+  id="single-quote-button"
+  hx-get="/single-quote"
+  hx-trigger="click"
+  hx-target="#quote-form"
+>
+  Single Quote
+</div>
+<div
+  class="action-button {{if .IsMultiQuote}}toggled{{else}} {{end}}"
+  id="multi-quote-button"
+  hx-get="/multi-quote"
+  hx-trigger="click"
+  hx-target="#quote-form"
+>
+  Multi Quote
+</div>
