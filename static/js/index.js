@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
         event.preventDefault();
-        button.click();
         return;
       }
     });
